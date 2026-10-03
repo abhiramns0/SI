@@ -32,9 +32,15 @@ canvas{position:fixed;inset:0;width:100%;height:100%;display:block}
 <button id="mute" aria-label="Mute">🔊</button>
 <div id="ov"><h1 id="t1">SINKING<br>ISLAND</h1><p id="t2">Build. Escape. Survive.</p><button id="go">START</button></div>
 <script>
+
+
+ 
 // ===== CONFIG (edit to tune) =====
-const CFG={duration:60,islandR:380,endR:40,failR:60,speed:130,woodNeed:8,leavesNeed:5,trees:7,bushes:6,treeAmt:3,bushAmt:2,
+const CFG={duration:30,islandR:700,endR:40,failR:60,speed:130,woodNeed:15,leavesNeed:10,trees:7,bushes:7,treeAmt:3,bushAmt:2,
 collectR:46,buildR:75,buildTime:4,boardR:48,debug:/[?&]debug/.test(location.search)};
+
+
+ 
 // water rise speed = (islandR-endR)/duration (shrinking shore)
 const cv=document.getElementById('c'),g=cv.getContext('2d'),$=id=>document.getElementById(id);
 let W,H,dpr,A;
